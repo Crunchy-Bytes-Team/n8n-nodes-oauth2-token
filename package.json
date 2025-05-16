@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-oauth2-token",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "n8n node to manage OAuth2 tokens",
   "keywords": [
     "n8n-community-node-package",
@@ -21,7 +21,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && cp -R src/nodes/OAuth2Token/*.json dist/nodes/OAuth2Token/ && cp -R src/nodes/OAuth2Token/*.svg dist/nodes/OAuth2Token/",
+    "build": "tsc",
     "dev": "tsc --watch",
     "format": "prettier --write .",
     "lint": "eslint src --ext .ts",
@@ -31,13 +31,7 @@
     "dist"
   ],
   "n8n": {
-    "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/OAuth2Api.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/OAuth2Token/OAuth2Token.node.js"
-    ]
+    "n8nNodesApiVersion": 1
   },
   "dependencies": {
     "n8n-core": "^1.0.0",
